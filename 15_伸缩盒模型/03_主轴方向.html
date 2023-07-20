@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 600px;
+            background-color: grey;
+            margin:0 auto;
+            display: flex;
+
+            /* 调整主轴方向 水平从左到右 默认 */
+            flex-direction: row;
+
+            /* 调整主轴方向 垂直从上到下 */
+            /* flex-direction: column; */
+
+            /* 主轴换行方式 子元素不拥挤 默认*/
+            flex-wrap: wrap;
+           
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">1</div>
+        <div class="inner">2</div>
+        <div class="inner">3</div>
+        <div class="inner">3</div>
+        <div class="inner">3</div>
+        <div class="inner">3</div>
+        <div class="inner">3</div>
+        <div class="inner">3</div>
+        <div class="inner">3</div>
+        <div class="inner">3</div>
+    </div>
+    
+</body>
+</html>
