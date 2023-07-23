@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        // 使用原生dom
+        window.onload = function (){
+            var btn1 = document.getElementById('btn1')
+            btn1.onclick = function () {
+                var username = document.getElementById('username').value
+                alert(username)
+            }
+        }
+    </script>
+
+<!--    使用jQuery-->
+<!--    <script type="text/javascript" src="js/jquery-1.12.3.js"></script>-->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.1/jquery.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $('#btn2').click(function (){
+                var username = $('#username').val()
+                alert(username)
+            })
+        })
+    </script>
+</head>
+<body>
+<input type="text" id="username">
+<button id="btn1">原生</button>
+<button id="btn2">jQuery</button>
+
+</body>
+</html>
