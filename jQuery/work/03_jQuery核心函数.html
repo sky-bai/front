@@ -9,21 +9,42 @@
 
 <div>
   <button id = "btn"> 测试</button>
+    <br/>
+
+    <input type="text" name="msg1"><br/>
+    <input type="text" name="msg2"><br/>
 </div>
 
 
 <!--  作为一般函数调用: $(param)
-1.参数作为函数:当DOM加载完成后，执行此回调函数
-2.
+示例1.参数作为函数:当DOM加载完成后，执行此回调函数
+示例2.参数作为选择器字符串，查找所有匹配的标签，并将它们封装成jQuery对象
 
 
 -->
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.1/jquery.js"></script>
-<script>
-  <!--    1.参数作为函数:当DOM加载完成后,执行此回调函数-->
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.10.1/jquery.js"></script>
+<script type="text/javascript">
+  // <!--    1.参数作为函数:当DOM加载完成后,执行此回调函数-->
   $(function (){ // 绑定文档加载完成当监听
+  //    需求1: 点击按钮：显示按钮的文本，显示一个新的输入框
+      // 这里用到的是示例2
+      $('#btn').click(function (){ // 绑定点击事件监听
+          // this 是什么？ 发生事件的dom元素(<button)>
+          alert(this.innerHTML)
+          // alert($(this).html())
+
+      })
 
   })
+
+// 需求2. 遍历输出数组中所有元素值
+var arr = [2,4,7]
+// 1). $.each() : 隐式遍历数组
+$.each(arr,function(index,item){
+  console.log("index:",index,item)
+})
+
+// jQuery 对象是以恶包含所有匹配的任意多个dom元素的伪数组对象
 </script>
 
 
